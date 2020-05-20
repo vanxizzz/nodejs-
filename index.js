@@ -3,7 +3,7 @@ const path = require("path")
 
 const rs = fs.createReadStream(path.resolve(__dirname, "./abc.txt"), {
     encoding: "utf-8",
-    highWaterMark: 1,//每次读取的大小（默认是64kb,会影响data事件），如果encoding是utf-8则单位是字符，如果是null则单位：字节
+    highWaterMark: 1,//每次读取的大小（默认是16kb,会影响data事件），如果encoding是utf-8则单位是字符，如果是null则单位：字节
     autoClose: true//读完后自动关闭，默认true
 });;
 
